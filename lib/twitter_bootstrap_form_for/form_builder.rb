@@ -10,6 +10,7 @@ class TwitterBootstrapFormFor::FormBuilder < ActionView::Helpers::FormBuilder
 
   INPUTS = [
     :select,
+    :collection_check_boxes,
     *ActionView::Helpers::FormBuilder.instance_methods.grep(%r{
       _(area|field|select)$ # all area, field, and select methods
     }mx).map(&:to_sym)
